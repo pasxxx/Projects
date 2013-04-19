@@ -134,7 +134,8 @@ Module Module1
                     End While
                 End If
             Case DayOfWeek.Saturday
-                System.Threading.Thread.Sleep(24 * 60 * 60 * 1000)
+                CallTaxi()
+                System.Threading.Thread.Sleep(12 * 60 * 60 * 1000)
             Case DayOfWeek.Sunday
                 System.Threading.Thread.Sleep(12 * 60 * 60 * 1000)
                 PrepareForWork()
@@ -146,13 +147,18 @@ Module Module1
     End Function
 
     Public Function DoWork()
+
     End Function
 
     Public Function PrepareForWork()
     End Function
 
     Private Sub GoToHome()
-        Throw New NotImplementedException
+        
+    End Sub
+
+    Private Async Sub CallTaxi(taxiNumber As String) as Boolean
+        //TODO: 
     End Sub
 
 End Module
